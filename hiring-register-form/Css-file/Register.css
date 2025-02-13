@@ -1,0 +1,38 @@
+*{
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+}
+
+html, body{
+height : 100%;
+width : 100%;
+}
+
+.main-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+.form-box{
+    display: flex;
+    gap: 30px;
+    background-color: aqua;
+}
+
+.form-box input{
+    width: 250px;
+    height: 40px;
+}
