@@ -12,9 +12,9 @@
             <div class="box">
                 
                 <form>
-                <div class="heading">
-                    <h1>Apply for Frontend Developer Post</h1>
-                </div>
+                    <div class="heading">
+                        <h1>Apply for Frontend Developer Post</h1>
+                    </div>
                     <div class="form-box">
                         <input type="text" name="name" placeholder="Enter your Name">
                         <input type="text" name="Quali" placeholder="Qualification">
@@ -34,7 +34,11 @@
             </div>
 
             <div class="box2">
+ 
                 <h1>Welcome</h1>
+
+                <img src="./images.png" alt="">
+
                 <p>Please fill all the details carefully. This form can change your life.</p>
                 <button name="check" id="chechbtn">Check Form</button>
             </div>
