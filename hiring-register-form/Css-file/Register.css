@@ -11,28 +11,105 @@ width : 100%;
 
 .main-box{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: auto;
     height: 100%;
+    
+}
+.support-div{
+    border-radius: 10px;
+    display: flex;
+    width: 85vw;
+    height: 500px;
+    background-color: rgba(79, 48, 237, 0.84);
+    justify-content: space-evenly;
+    align-items: center;
 }
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 400px;
-    background-color: antiquewhite;
-    border-radius: 5px;
+    width: 750px;
+    height: 450px;
+    background-color: white;
+
+    border-radius: 10px;
+}
+
+.box2{
+    width: 300px;
+
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
 }
 
 .form-box{
+    flex-wrap: wrap;
     display: flex;
-    gap: 30px;
-    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 .form-box input{
-    width: 250px;
+    padding-left: 10px;
+    width: 300px;
     height: 40px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 4px;
 }
+
+.btn{
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+button{
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 170px;
+    height: 40px;
+    color: white;
+    background-color: rgb(81, 81, 241);
+}
+
+.box2 h1{
+    color: white;
+    margin-bottom: 30px;
+}
+.box2 p{
+    max-width: 180px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#chechbtn{
+    background-color: azure;
+    color: black;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 600px) {
+    .support-div{
+        background-color: white;
+    }
+    .box2{
+        display: none;
+    }
+  }
+  
