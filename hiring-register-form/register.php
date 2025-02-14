@@ -11,15 +11,15 @@
         <div class="support-div">
             <div class="box">
                 
-                <form>
+                <form method="POST">
                     <div class="heading">
                         <h1>Apply for Frontend Developer Post</h1>
                     </div>
                     <div class="form-box">
                         <input type="text" name="name" placeholder="Enter your Name">
-                        <input type="text" name="Quali" placeholder="Qualification">
+                        <input type="text" name="quali" placeholder="Qualification">
                     
-                        <input type="number" name="number" placeholder="Enter your Number">
+                        <input type="number" name="number" placeholder="Enter your Number" >
                         <input type="email" name="email" placeholder="Enter Email">
                     
                         <input type="text" name="ref" placeholder="Refrence">
@@ -54,6 +54,34 @@
 
 
 <?php
-// include 'connection.php';
+ include 'connection.php';
+
+if(isset($_POST['register'])){
+    $Name= $_POST ['name'];
+    $Quali= $_POST ['quali'];
+    $Num= $_POST ['number'];
+    $Email= $_POST ['email'];
+    $Ref= $_POST ['ref'];
+    $Job= $_POST ['job'];
+    
+
+    $insertQuery= "insert into jobregister (Name, Degree, Mobile, Email, Refer, `Job-Post`) values('$Name', '$Quali', '$Num', '$Email', '$Ref', '$Job')";
+
+    $result= mysqli_query($con, $insertQuery);
+
+    if($result){
+        ?>
+        <script>
+            alert('Form submitted');
+        </script>
+        <?php
+    } else{
+        ?>
+        <script>
+            alert('Technical issue after some times try again!');
+        </script>
+        <?php
+    }
+}
 
 ?>

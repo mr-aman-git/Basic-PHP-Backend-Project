@@ -7,14 +7,14 @@ $db= 'newprojectdemo';
 
 $con= mysqli_connect($server, $username, $password, $db);
 
-if($con){
-    ?>
-    <script>
-        alert ('Connection Sucessfull')
-    </script>
+// if($con){
+//     ?>
+//     <script>
+//         alert ('Connection Sucessfull')
+//     </script>
 
-    <?php
-}
+//     <?php
+// }
 
 
 
