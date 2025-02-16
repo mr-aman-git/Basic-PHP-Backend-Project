@@ -40,7 +40,7 @@
                 <img src="./images.png" alt="">
 
                 <p>Please fill all the details carefully. This form can change your life.</p>
-                <button name="check" id="chechbtn">Check Form</button>
+                <button name="check" id="chechbtn"><a href="form.php">Check Form</a></button>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@ if(isset($_POST['register'])){
     $Job= $_POST ['job'];
     
 
-    $insertQuery= "insert into jobregister (Name, Degree, Mobile, Email, Refer, `Job-Post`) values('$Name', '$Quali', '$Num', '$Email', '$Ref', '$Job')";
+    $insertQuery= "insert into jobregister (Name, Degree, Mobile, Email, Refer, Post) values('$Name', '$Quali', '$Num', '$Email', '$Ref', '$Job')";
 
     $result= mysqli_query($con, $insertQuery);
 

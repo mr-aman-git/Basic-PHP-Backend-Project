@@ -103,6 +103,7 @@ button{
     background-color: azure;
     color: black;
     margin-left: 20px;
+    text-decoration: none;
 }
 
 .box2 img{
