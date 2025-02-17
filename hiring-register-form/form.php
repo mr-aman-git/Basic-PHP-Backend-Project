@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Table</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
 
@@ -12,19 +16,20 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid black;
 }
 
 th, td {
-  text-align: left;
+  text-align: center;
   padding: 8px;
+  border: 1px solid black;
+  
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
+
 </style>
 
-</head>
-<body>
 
 <h2>Form Table</h2>
 
@@ -35,20 +40,39 @@ tr:nth-child(even){background-color: #f2f2f2}
       <th>Email</th>
       <th>Degree</th>
       <th>Post</th>
+      <th colspan="2">Operation</th>
     </tr>
+
+    <?php
+include 'connection.php';
+
+$selectQuery= "select * from jobregister ";
+
+$query= mysqli_query($con, $selectQuery);
+
+$nums= mysqli_num_rows($query);
+
+$result= mysqli_fetch_array($query);
+
+while($result= mysqli_fetch_array($query)){
+    // echo $result["Name"] . "</br>";
+?>
     <tr>
    
-      <td>Aman Sharma</td>
-      <td>aman@gmail.com</td>
-      <td>BCA</td>
-      <td>frontend</td>
+      <td><?php echo $result['Name'] ?></td>
+      <td><?php echo $result['Email'] ?></td>
+      <td><?php echo $result['Degree'] ?></td>
+      <td><?php echo $result['Post'] ?></td>
+      <td><i class="ri-delete-bin-3-line"></i></td>
+      <td><i class="ri-edit-box-line"></i></td>
     </tr>
-    <tr>
-      <td>Sakshi</td>
-      <td>sakshi@gmail.com</td>
-      <td>BCOM</td>
-      <td>HR</td>
-    </tr>
+
+   <?php 
+}
+
+
+?>
+    
     
   </table>
 </div>
@@ -62,24 +86,3 @@ tr:nth-child(even){background-color: #f2f2f2}
 
 
 
-<?php
-include 'connection.php';
-
-$selectQuery= "select * from jobregister ";
-
-$query= mysqli_query($con, $selectQuery);
-
-$nums= mysqli_num_rows($query);
-
-$result= mysqli_fetch_array($query);
-
-while($result= mysqli_fetch_array($query)){
-    echo "</br>";
-    echo $result["Name"] . "</br>";
-    echo $result["Email"] . "</br>";
-    echo $result["Degree"] . "</br>";
-    echo $result["Post"] . "</br>";
-}
-
-
-?>
